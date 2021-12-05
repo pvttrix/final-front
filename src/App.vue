@@ -1,8 +1,9 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <nav id="nav">
+    <router-link to="/">Game</router-link>
+    <router-link to="/registration">Register</router-link>
+    <router-link to="/login">Login</router-link>
+  </nav>
   <router-view/>
 </template>
 
@@ -16,14 +17,19 @@
 }
 
 #nav {
-  padding: 30px;
-
+  background-color: rgb(44, 130, 224);
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 50px;
   a {
+    margin-right: 30px;
     font-weight: bold;
-    color: #2c3e50;
+    color: #fff;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #aaf563;
     }
   }
 }
